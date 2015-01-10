@@ -22,6 +22,18 @@ To make it work you should do:
 ```
 and then un-comment `resource-paths` in project.clj.
 
+Another way to compile java files is to put protobuf-java into classpath:
+```
+javac -d target/classes -cp ~/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar src/java/RealtimeBidding.java
+```
+After that you get:
+```
+$ lein run -m proto.core                                                                                                                    
+Exception in thread "main" java.lang.VerifyError: class RealtimeBidding$BidRequest overrides final method getUnknownFields.()Lcom/google/protobuf/UnknownFieldSet;, compiling:(proto/core.clj:1:1)
+
+```
+
+
 ## License
 
 Copyright © 2015
