@@ -11,7 +11,7 @@ $ protoc --version
 libprotoc 2.5.0
 $ protoc --java_out=src/java/ resources/proto/realtime-bidding.proto --proto_path=resources/proto
 ```
-Run project:
+Run project and see compilation errors:
 ```
 $ lein run -m proto.core
 ```
@@ -20,7 +20,7 @@ To make it work you should do:
 ```
  $ cp ~/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar lib/
 ```
-and then un-comment `resource-paths` in project.clj
+and then un-comment `resource-paths` in project.clj.
 
 ## License
 
