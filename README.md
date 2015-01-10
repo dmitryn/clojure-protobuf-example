@@ -16,6 +16,12 @@ Run project:
 $ lein run -m proto.core
 ```
 
+To make it work you should do:
+```
+ $ cp ~/.m2/repository/com/google/protobuf/protobuf-java/2.5.0/protobuf-java-2.5.0.jar lib/
+```
+and then un-comment `resource-paths` in project.clj
+
 ## License
 
 Copyright © 2015
